@@ -65,9 +65,13 @@ function mouseUp(e) {
 }
 
 function click() {
+    // Toggles the square
     let x = Math.floor((mouseX + cameraX) / 10);
     let y = Math.floor((mouseY + cameraY) / 10);
     grid[x][y] = !grid[x][y];
+
+    // Stops simulating
+    simulating = false;
 
     console.log("toggled " + x + " " + y);
     requestAnimationFrame(draw);
@@ -131,7 +135,7 @@ function update() {
         newGrid.push(a);
     }
     grid = newGrid;
-    draw();
+    requestAnimationFrame(draw);
 }
 
 function getGrid(x, y) {
