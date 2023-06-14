@@ -4,8 +4,8 @@ canvas.height = window.innerHeight;
 const context = canvas.getContext('2d');
 
 const MAX_MOVE_FOR_CLICK = 10;
-const GRID_WIDTH = 100;
-const GRID_HEIGHT = 100;
+const GRID_WIDTH = 1000;
+const GRID_HEIGHT = 1000;
 const SIMULATION_RATE = 4;
 
 let grid = []
@@ -19,8 +19,8 @@ for (let x = 0; x < GRID_WIDTH; x++) {
 grid[1][1] = true;
 console.log(grid);
 
-let cameraX = 0;
-let cameraY = 0;
+let cameraX = 5000;
+let cameraY = 5000;
 
 let mouseX = 0;
 let mouseY = 0;
